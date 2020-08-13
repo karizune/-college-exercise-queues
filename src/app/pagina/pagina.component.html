@@ -1,0 +1,43 @@
+<div class="container" style="margin-top: 50px; text-align: center;">
+<h1>Sistema de filas simples</h1>
+<br><br>
+<div>
+        <h1>Cliente</h1>
+        <h4>Selecione o tipo de senha desejada:</h4>
+        <select #tipoSenha>
+            <option value="1">Senha Comum</option>
+            <option value="2">Senha Prioritária</option>
+        </select>
+    <button class="btn btn-outline-success" (click)="adicionaCliente(tipoSenha.value)">PEGAR SENHA</button>
+    <br><br>
+    <h5>Sua senha:</h5>
+    <textarea>{{senhaCliente}}</textarea>
+</div>
+<br><br>
+<div class="container" style="margin-top: 10px; align-items: center;">
+    <h1>Caixas</h1>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem; text-align: center;">
+                Caixa 1
+                <textarea name="chamada">{{senha1}}</textarea>
+                <div class="card-body" style="align-self: center;">
+                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(1)">Chamar</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="card" style="width: 18rem; text-align: center;">
+                Caixa 2
+                <textarea name="chamada">{{senha2}}</textarea>
+                <div class="card-body" style="align-self: center;">
+                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(2)">Chamar</button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <button class="btn btn-outline-danger" (click)="resetar()">Resetar</button>
+</div>
+</div>
