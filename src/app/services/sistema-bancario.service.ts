@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class SistemaBancarioService {
 
   filaComum = [] ;
-  filaPrioritaria =[];
+  filaPrioritaria = [];
   countComum: number = 0;
   countPrioritario: number = 0;
   senha:string;
@@ -25,7 +25,7 @@ export class SistemaBancarioService {
     }
     else if(tipoSenha == 2){
       this.countPrioritario++;
-      this.senha = `CXP-${(this.countPrioritario + 1).toString()}`;
+      this.senha = `CXP-${(this.countPrioritario).toString()}`;
       this.filaPrioritaria.push(this.senha);
     } 
   }

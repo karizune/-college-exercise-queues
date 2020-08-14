@@ -1,13 +1,16 @@
-<div class="container" style="margin-top: 50px; text-align: center;">
+<div class="container" style="margin-top: 50px; text-align: center; margin-bottom: 50px;">
 <h1>Sistema de filas simples</h1>
 <br><br>
 <div>
         <h1>Cliente</h1>
+        <br>
         <h4>Selecione o tipo de senha desejada:</h4>
+        <br>
         <select #tipoSenha>
             <option value="1">Senha Comum</option>
             <option value="2">Senha Prioritária</option>
         </select>
+        &nbsp;
     <button class="btn btn-outline-success" (click)="adicionaCliente(tipoSenha.value)">PEGAR SENHA</button>
     <br><br>
     <h5>Sua senha:</h5>
@@ -18,26 +21,33 @@
     <h1>Caixas</h1>
     <br>
     <br>
-    <div class="row">
-        <div class="col">
+    <div class="row" style="margin-left: 20px;">
+        <div class="col-4">
             <div class="card" style="width: 18rem; text-align: center;">
-                Caixa 1
+                Caixa Comum
                 <textarea name="chamada">{{senha1}}</textarea>
                 <div class="card-body" style="align-self: center;">
-                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(1)">Chamar</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(1)">Chamar Cliente</button>
                 </div>
             </div>
         </div>
-        <div>
+        <div class="col-4">
             <div class="card" style="width: 18rem; text-align: center;">
-                Caixa 2
+                Ultima Chamada
+                <textarea name="chamada">{{ultimaSenha}}</textarea>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card" style="width: 18rem; text-align: center;">
+                Caixa Prioritário
                 <textarea name="chamada">{{senha2}}</textarea>
                 <div class="card-body" style="align-self: center;">
-                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(2)">Chamar</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(2)">Chamar Cliente</button>
                 </div>
             </div>
         </div>    
     </div>
+    <br><br>
     <button class="btn btn-outline-danger" (click)="resetar()">Resetar</button>
 </div>
 </div>
