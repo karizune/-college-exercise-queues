@@ -1,0 +1,51 @@
+<div class="container" style="margin-top: 50px; text-align: center; margin-bottom: 50px; width: 100%;">
+    <div class="container" style="margin-top: 10px; ">
+        <h1>Caixas</h1>
+        <br>
+        
+        <div class="row justify-content-center" style="text-align: center;">
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    Último Chamado
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">{{ultimaSenha}}</h5>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row justify-content-center" style="align-self: center; align-items: center;">
+                <div class="card bg-light mb-3" style="max-width: 18rem;">
+                    <div class="card-header">
+                        Caixa Comum
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-text">{{senha1}}</h5>
+                        <div class="card-body" style="align-self: center;">
+                            <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(1)">Chamar Cliente</button>
+                        </div>
+                    </div>
+        </div>
+        
+        &nbsp;&nbsp;
+
+        <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    Caixa Prioritário
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">{{senha2}}</h5>
+                    <div class="card-body" style="align-self: center;">
+                        <button type="button" class="btn btn-outline-primary" (click)="chamadaCaixa(2)">Chamar Cliente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <br><br>
+        <button class="btn btn-outline-danger" (click)="resetar()">Resetar</button>
+        <br><br>
+        <button class="btn btn-secondary" [routerLink]="['/']">lado do cliente</button>
+    </div>
+</div>

@@ -10,6 +10,7 @@ export class SistemaBancarioService {
   countComum: number = 0;
   countPrioritario: number = 0;
   senha:string;
+  ultimaSenha:string;
 
   constructor() { }
   
@@ -41,27 +42,31 @@ export class SistemaBancarioService {
     return this.senha;
   }
 
-  chamadaCaixa1(){
+  chamadaComum(){
     if(this.filaComum.length != 0){
-      return this.filaComum.shift();
+      this.ultimaSenha = this.filaComum.shift();
+      this.countComum--;
     }
     else if(this.filaPrioritaria.length != 0){
-      return this.filaPrioritaria.shift();
+      this.ultimaSenha = this.filaPrioritaria.shift();
+      this.countPrioritario--;
     }
     else{
-      return "Sem clientes na fila"
+      this.ultimaSenha = "Sem clientes na fila"
     }
+    return this.ultimaSenha;
   }
 
-  chamadaCaixa2(){
+  chamadaPrioritario(){
     if(this.filaPrioritaria.length != 0){
-      return this.filaPrioritaria.shift();
+      this.ultimaSenha =  this.filaPrioritaria.shift();
     }
     else if(this.filaComum.length != 0){
-      return this.filaComum.shift();
+      this.ultimaSenha = this.filaComum.shift();
     }
     else{
-      return "Sem clientes na fila"
+      this.ultimaSenha = "Sem clientes na fila";
     }
+    return this.ultimaSenha;
   }
 }

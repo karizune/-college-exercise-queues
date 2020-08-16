@@ -1,0 +1,42 @@
+<div class="container" style="margin-top: 50px; text-align: center; margin-bottom: 50px; width: 100%;">
+    <h1>Bank</h1>
+    <br>
+    <div>
+        <p>Bem vindo!</p>
+        <p><strong>Selecione o tipo de senha desejada:</strong></p>
+        <br>
+
+        <select #tipoSenha>
+            <option value="1">Senha Comum</option>
+            <option value="2">Senha Prioritária</option>
+        </select>
+        
+        <br><br>
+        <button class="btn btn-outline-success" (click)="adicionaCliente(tipoSenha.value)">PEGAR SENHA</button>
+        <br><br>
+
+        <div class="row justify-content-center" style="text-align: center;">
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    Sua Senha
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">{{senhaCliente}}</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" style="text-align: center;">
+            <div class="card bg-light mb-3" style="max-width: 18rem;">
+                <div class="card-header">
+                    Último Chamado
+                </div>
+                <div class="card-body">
+                    <h5 class="card-text">{{ultimaSenha}}</h5>
+                </div>
+            </div>
+        </div>
+    
+    </div>    
+    <button class="btn btn-secondary" [routerLink]="['/lado-caixa']">lado do caixa</button>
+</div>

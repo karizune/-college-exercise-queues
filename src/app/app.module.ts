@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PaginaComponent } from './pagina/pagina.component';
+import { HomeComponent } from './containers/home/home.component';
+import { LadoCaixaComponent } from './containers/lado-caixa/lado-caixa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaginaComponent
+    HomeComponent,
+    LadoCaixaComponent
   ],
   imports: [
     BrowserModule,
