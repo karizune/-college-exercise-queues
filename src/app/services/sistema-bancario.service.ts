@@ -60,9 +60,11 @@ export class SistemaBancarioService {
   chamadaPrioritario(){
     if(this.filaPrioritaria.length != 0){
       this.ultimaSenha =  this.filaPrioritaria.shift();
+      this.countPrioritario--;
     }
     else if(this.filaComum.length != 0){
       this.ultimaSenha = this.filaComum.shift();
+      this.countComum--;
     }
     else{
       this.ultimaSenha = "Sem clientes na fila";
